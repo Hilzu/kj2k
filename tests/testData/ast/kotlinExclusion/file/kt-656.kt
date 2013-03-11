@@ -1,19 +1,19 @@
 package demo
-open class Test() : java.lang.Iterable<String?> {
-public override fun iterator() : java.util.Iterator<String?>? {
+open class Test() : MutableIterable<String?> {
+public override fun iterator() : MutableIterator<String?>? {
 return null
 }
-public open fun push(i : java.util.Iterator<String?>?) : java.util.Iterator<String?>? {
-var j : java.util.Iterator<String?>? = i
+public open fun push(i : MutableIterator<String?>?) : MutableIterator<String?>? {
+var j : MutableIterator<String?>? = i
 return j
 }
 }
-open class FullTest() : java.lang.Iterable<String?> {
-public override fun iterator() : java.util.Iterator<String?>? {
+open class FullTest() : MutableIterable<String?> {
+public override fun iterator() : MutableIterator<String?>? {
 return null
 }
-public open fun push(i : java.util.Iterator<String?>?) : java.util.Iterator<String?>? {
-var j : java.util.Iterator<String?>? = i
+public open fun push(i : MutableIterator<String?>?) : MutableIterator<String?>? {
+var j : MutableIterator<String?>? = i
 return j
 }
 }

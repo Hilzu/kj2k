@@ -60,11 +60,27 @@ public open class TypeVisitor(private val myConverter : Converter) : PsiTypeVisi
                 }
 
                 if (qualifiedName.equals(CommonClassNames.JAVA_LANG_ITERABLE)) {
-                    return Identifier(CommonClassNames.JAVA_LANG_ITERABLE)
+                    return Identifier("MutableIterable")
                 }
 
                 if (qualifiedName.equals(CommonClassNames.JAVA_UTIL_ITERATOR)) {
-                    return Identifier(CommonClassNames.JAVA_UTIL_ITERATOR)
+                    return Identifier("MutableIterator")
+                }
+
+                if (qualifiedName.equals(CommonClassNames.JAVA_UTIL_LIST)) {
+                    return Identifier("MutableList")
+                }
+
+                if (qualifiedName.equals(CommonClassNames.JAVA_UTIL_COLLECTION)) {
+                    return Identifier("MutableCollection")
+                }
+
+                if (qualifiedName.equals(CommonClassNames.JAVA_UTIL_SET)) {
+                    return Identifier("MutableSet")
+                }
+
+                if (qualifiedName.equals(CommonClassNames.JAVA_UTIL_MAP)) {
+                    return Identifier("MutableMap")
                 }
             }
         }
